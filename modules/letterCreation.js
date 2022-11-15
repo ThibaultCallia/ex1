@@ -1,7 +1,7 @@
 import rl from "readline-sync";
 
 export function createLetter() {
-  const error = "Minstens een fout gevonden. Begin opnieuw\n";
+  const error = "Minstens een fout gevonden. Begin opnieuw.\n";
   let result = "";
 
   console.log(
