@@ -1,7 +1,8 @@
 import rl from "readline-sync";
 
 export function createLetter() {
-  const error = "Minstens een fout gevonden. Begin opnieuw.\n";
+  const error1 = "Minstens een fout gevonden. Begin opnieuw.\n";
+  const error2 = "Kader is te breed. Begin opnieuw.\n";
   let result = "";
 
   console.log(
@@ -20,7 +21,7 @@ export function createLetter() {
     const line3 = `${postal} ${city.toUpperCase()}`;
 
     if (postal < 1000 || postal > 9900 || isNaN(postal)) {
-      console.log(error);
+      console.log(error1);
       continue;
     }
 
@@ -31,11 +32,11 @@ export function createLetter() {
       postal == "" ||
       city == ""
     ) {
-      console.log(error);
+      console.log(error1);
       continue;
     }
     if (line1.length > 40 || line2.length > 40 || line3.length > 40) {
-      console.log(error);
+      console.log(error2);
       continue;
     }
 
